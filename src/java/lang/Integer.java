@@ -28,15 +28,18 @@ package java.lang;
 import java.lang.annotation.Native;
 
 /**
+ * Integer 包含一个 int 类进和值都是 int
  * The {@code Integer} class wraps a value of the primitive type
  * {@code int} in an object. An object of type {@code Integer}
  * contains a single field whose type is {@code int}.
  *
+ * 支持 Integer 转 String、 String 转 Integer 也有一些其他方法进行转换
  * <p>In addition, this class provides several methods for converting
  * an {@code int} to a {@code String} and a {@code String} to an
  * {@code int}, as well as other constants and methods useful when
  * dealing with an {@code int}.
  *
+ * 没读懂
  * <p>Implementation note: The implementations of the "bit twiddling"
  * methods (such as {@link #highestOneBit(int) highestOneBit} and
  * {@link #numberOfTrailingZeros(int) numberOfTrailingZeros}) are
@@ -49,6 +52,7 @@ import java.lang.annotation.Native;
  * @author  Joseph D. Darcy
  * @since JDK1.0
  */
+// final 不允许被继承
 public final class Integer extends Number implements Comparable<Integer> {
     /**
      * A constant holding the minimum value an {@code int} can

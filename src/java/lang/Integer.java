@@ -52,21 +52,24 @@ import java.lang.annotation.Native;
  * @author  Joseph D. Darcy
  * @since JDK1.0
  */
-// final 不允许被继承
+// final 不允许被继承 需要了解 Number 是什么和 Comparable 是什么
 public final class Integer extends Number implements Comparable<Integer> {
     /**
+     * int 的最小值 -2147483648
      * A constant holding the minimum value an {@code int} can
      * have, -2<sup>31</sup>.
      */
     @Native public static final int   MIN_VALUE = 0x80000000;
 
     /**
+     * int 的最大值 2147483647
      * A constant holding the maximum value an {@code int} can
      * have, 2<sup>31</sup>-1.
      */
     @Native public static final int   MAX_VALUE = 0x7fffffff;
 
     /**
+     * 基础 Class 类 提供类型 int
      * The {@code Class} instance representing the primitive type
      * {@code int}.
      *
@@ -76,6 +79,7 @@ public final class Integer extends Number implements Comparable<Integer> {
     public static final Class<Integer>  TYPE = (Class<Integer>) Class.getPrimitiveClass("int");
 
     /**
+     * 所有可能出现的 char 类型相当于一个数字
      * All possible chars for representing a number as a String
      */
     final static char[] digits = {
@@ -131,6 +135,7 @@ public final class Integer extends Number implements Comparable<Integer> {
      * @see     java.lang.Character#MAX_RADIX
      * @see     java.lang.Character#MIN_RADIX
      */
+    // 第一个数是数值、第二个数字是进制
     public static String toString(int i, int radix) {
         if (radix < Character.MIN_RADIX || radix > Character.MAX_RADIX)
             radix = 10;
